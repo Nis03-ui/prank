@@ -5,6 +5,11 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background: #f3f3f3;
   color: #171717;
@@ -16,28 +21,32 @@ body {
 }
 
 
-/* ===============================
-   PARODY
-================================ */
+/* =================================
+   PARODY BANNER
+================================= */
 
 .parody-banner {
-  padding: 8px 12px;
+  width: 100%;
+
+  padding: 7px 10px;
 
   background: #fff3cd;
+
   color: #664d03;
+
+  border-bottom: 1px solid #ead58a;
 
   text-align: center;
 
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 10px;
 
-  border-bottom: 1px solid #ead58a;
+  font-weight: 700;
 }
 
 
-/* ===============================
+/* =================================
    HEADER
-================================ */
+================================= */
 
 .header {
   background: white;
@@ -47,9 +56,9 @@ body {
 
 
 .header-main {
-  height: 70px;
+  height: 62px;
 
-  padding: 0 18px;
+  padding: 0 13px;
 
   display: flex;
 
@@ -59,13 +68,14 @@ body {
 }
 
 
-.menu,
-.search {
-  border: 0;
+.icon-button {
+  border: none;
 
   background: transparent;
 
-  font-size: 20px;
+  color: #444;
+
+  font-size: 15px;
 
   cursor: pointer;
 }
@@ -74,7 +84,7 @@ body {
 .logo {
   font-family: Georgia, serif;
 
-  font-size: 24px;
+  font-size: 22px;
 
   font-weight: 900;
 }
@@ -85,14 +95,18 @@ body {
 }
 
 
+/* =================================
+   NAVIGATION
+================================= */
+
 .nav {
   display: flex;
 
   overflow-x: auto;
 
-  border-top: 1px solid #eee;
-
   scrollbar-width: none;
+
+  border-top: 1px solid #eee;
 }
 
 
@@ -104,105 +118,117 @@ body {
 .nav a {
   flex-shrink: 0;
 
-  padding: 13px 15px;
+  padding: 10px 13px;
 
   color: #333;
 
   text-decoration: none;
 
-  font-size: 13px;
+  font-size: 11px;
 
   font-weight: 600;
 }
 
 
-/* ===============================
+/* =================================
    BREAKING
-================================ */
+================================= */
 
 .breaking {
-  min-height: 40px;
+  min-height: 37px;
 
   display: flex;
 
   align-items: center;
 
+  overflow: hidden;
+
   background: #c40000;
 
   color: white;
-
-  overflow: hidden;
 }
 
 
 .breaking strong {
-  padding: 11px 13px;
+  padding: 10px 11px;
 
   background: #920000;
 
-  font-size: 10px;
+  font-size: 9px;
+
+  flex-shrink: 0;
 }
 
 
 .breaking span {
-  padding: 0 13px;
+  padding: 0 11px;
 
-  font-size: 12px;
+  font-size: 11px;
 
   white-space: nowrap;
 }
 
 
-/* ===============================
+/* =================================
    PAGE
-================================ */
+================================= */
 
 .page {
+  width: 100%;
+
   max-width: 900px;
 
   margin: auto;
 
-  padding: 20px 15px 70px;
+  padding: 9px 9px 50px;
 }
 
 
 .breadcrumb {
+  padding: 5px 2px 9px;
+
   color: #888;
 
-  font-size: 11px;
-
-  margin-bottom: 15px;
+  font-size: 9px;
 }
 
+
+/* =================================
+   ARTICLE
+================================= */
 
 .article {
   background: white;
 
   border: 1px solid #ddd;
 
-  padding: 20px;
+  padding: 14px;
 }
 
+
+/* =================================
+   HERO NEWS
+================================= */
 
 .category {
+  margin-bottom: 6px;
+
   color: #c40000;
 
-  font-size: 12px;
+  font-size: 10px;
 
   font-weight: 800;
-
-  margin-bottom: 12px;
 }
 
 
-.article h1 {
+.hero-news h1 {
   font-family: Georgia, serif;
 
-  font-size: 34px;
+  font-size: 25px;
 
-  line-height: 1.25;
+  line-height: 1.22;
 
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 
 
@@ -211,11 +237,11 @@ body {
 
   font-family: Georgia, serif;
 
-  font-size: 17px;
+  font-size: 13px;
 
-  line-height: 1.6;
+  line-height: 1.4;
 
-  margin-bottom: 18px;
+  margin-bottom: 9px;
 }
 
 
@@ -224,9 +250,9 @@ body {
 
   flex-wrap: wrap;
 
-  gap: 9px;
+  gap: 7px;
 
-  padding: 13px 0;
+  padding: 8px 0;
 
   border-top: 1px solid #eee;
 
@@ -234,151 +260,30 @@ body {
 
   color: #888;
 
-  font-size: 11px;
+  font-size: 9px;
 }
 
 
-/* ===============================
-   IMAGE
-================================ */
-
-.image {
-  height: 210px;
-
-  margin-top: 20px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #333,
-      #777
-    );
-
-  color: white;
-
-  font-size: 24px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-}
-
-
-.caption {
-  margin-top: 6px;
-
-  color: #999;
-
-  font-size: 10px;
-}
-
-
-/* ===============================
-   CONTENT
-================================ */
-
-.content {
-  padding-top: 25px;
-}
-
-
-.content p {
-  font-family: Georgia, serif;
-
-  font-size: 17px;
-
-  line-height: 1.9;
-
-  margin-bottom: 22px;
-}
-
-
-.content h2 {
-  font-family: Georgia, serif;
-
-  font-size: 24px;
-
-  margin: 30px 0 15px;
-}
-
-
-/* ===============================
-   INFO
-================================ */
-
-.info-box {
-  padding: 18px;
-
-  margin: 25px 0;
-
-  background: #f7f7f7;
-
-  border-left: 4px solid #c40000;
-}
-
-
-.info-box strong {
-  display: block;
-
-  margin-bottom: 7px;
-}
-
-
-.info-box p {
-  margin: 0;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 13px;
-}
-
-
-/* ===============================
-   READ
-================================ */
-
-.read-area {
-  margin-top: 35px;
-
-  padding-top: 25px;
-
-  border-top: 1px solid #ddd;
-
-  text-align: center;
-}
-
-
-.read-area p {
-  font-family: Arial, sans-serif;
-
-  color: #777;
-
-  font-size: 12px;
-
-  margin-bottom: 12px;
-}
-
+/* =================================
+   READ BUTTON
+================================= */
 
 .read-button {
   width: 100%;
 
-  min-height: 58px;
+  height: 48px;
 
-  border: 0;
+  margin-top: 11px;
 
-  border-radius: 5px;
+  border: none;
+
+  border-radius: 4px;
 
   background: #c40000;
 
   color: white;
 
-  font-size: 16px;
+  font-size: 14px;
 
   font-weight: 800;
 
@@ -395,17 +300,121 @@ body {
 
 .read-button:disabled {
   opacity: .6;
+
+  cursor: default;
 }
 
 
-/* ===============================
+/* =================================
+   ARTICLE CONTENT
+================================= */
+
+.article-content {
+  padding-top: 22px;
+}
+
+
+.image {
+  height: 175px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #333,
+      #777
+    );
+
+  color: white;
+
+  font-size: 21px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.caption {
+  margin-top: 5px;
+
+  color: #999;
+
+  font-size: 9px;
+}
+
+
+.article-content p {
+  margin-top: 19px;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+.article-content h2 {
+  margin-top: 27px;
+
+  font-family: Georgia, serif;
+
+  font-size: 21px;
+}
+
+
+/* =================================
+   INFO BOX
+================================= */
+
+.info-box {
+  margin-top: 22px;
+
+  padding: 16px;
+
+  background: #f7f7f7;
+
+  border-left: 4px solid #c40000;
+}
+
+
+.info-box h3 {
+  margin-bottom: 10px;
+
+  font-size: 15px;
+}
+
+
+.info-box ul {
+  padding-left: 18px;
+}
+
+
+.info-box li {
+  margin-bottom: 7px;
+
+  color: #555;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* =================================
    NOTICE
-================================ */
+================================= */
 
 .notice {
-  margin-top: 20px;
+  margin-top: 25px;
 
-  padding: 12px;
+  padding: 11px;
 
   background: #fff3cd;
 
@@ -415,15 +424,15 @@ body {
 
   text-align: center;
 
-  font-size: 11px;
+  font-size: 10px;
 
   line-height: 1.5;
 }
 
 
-/* ===============================
-   LOADING
-================================ */
+/* =================================
+   LOADING SCREEN
+================================= */
 
 .loading-screen {
   position: fixed;
@@ -452,16 +461,16 @@ body {
 .loading-box {
   width: 90%;
 
-  max-width: 350px;
+  max-width: 320px;
 }
 
 
 .spinner {
-  width: 42px;
+  width: 40px;
 
-  height: 42px;
+  height: 40px;
 
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
 
   border: 4px solid #ddd;
 
@@ -483,22 +492,22 @@ body {
 
 
 .loading-box h3 {
-  font-size: 17px;
+  margin-bottom: 6px;
 
-  margin-bottom: 7px;
+  font-size: 16px;
 }
 
 
 .loading-box p {
   color: #888;
 
-  font-size: 12px;
+  font-size: 11px;
 }
 
 
-/* ===============================
-   PRANK
-================================ */
+/* =================================
+   PRANK SCREEN
+================================= */
 
 .prank-screen {
   position: fixed;
@@ -506,6 +515,8 @@ body {
   inset: 0;
 
   z-index: 9999;
+
+  width: 100vw;
 
   height: 100vh;
 
@@ -517,7 +528,7 @@ body {
 
   justify-content: center;
 
-  padding: 25px;
+  padding: 20px;
 
   background:
     radial-gradient(
@@ -557,14 +568,16 @@ body {
 .prank-content {
   width: 100%;
 
-  max-width: 430px;
+  max-width: 400px;
 }
 
 
 .prank-emoji {
-  font-size: 80px;
+  font-size: 58px;
 
-  margin-bottom: 20px;
+  font-weight: 900;
+
+  margin-bottom: 18px;
 
   animation:
     bounce .5s infinite alternate;
@@ -578,7 +591,7 @@ body {
   }
 
   to {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
   }
 
 }
@@ -587,48 +600,97 @@ body {
 .prank-label {
   display: inline-block;
 
-  padding: 6px 10px;
+  padding: 5px 9px;
 
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 
   background: #c40000;
 
-  font-size: 10px;
+  font-size: 9px;
 
   font-weight: 900;
-
-  letter-spacing: 1px;
 }
 
 
 .prank-content h2 {
-  font-size: 38px;
+  font-size: 34px;
 
   line-height: 1.1;
 
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 
 .prank-content p {
-  font-size: 18px;
+  font-size: 16px;
 
-  line-height: 1.6;
+  line-height: 1.5;
 
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 
 .prank-content small {
   color: #999;
 
-  font-size: 12px;
+  font-size: 11px;
 }
 
 
-/* ===============================
-   DESKTOP
-================================ */
+/* =================================
+   VERY SMALL PHONES
+================================= */
+
+@media (max-width: 390px) {
+
+  .header-main {
+    height: 58px;
+  }
+
+
+  .logo {
+    font-size: 20px;
+  }
+
+
+  .page {
+    padding: 6px;
+  }
+
+
+  .article {
+    padding: 12px;
+  }
+
+
+  .hero-news h1 {
+    font-size: 23px;
+
+    line-height: 1.18;
+  }
+
+
+  .lead {
+    font-size: 12px;
+
+    line-height: 1.35;
+  }
+
+
+  .read-button {
+    height: 46px;
+
+    margin-top: 9px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =================================
+   TABLET / DESKTOP
+================================= */
 
 @media (min-width: 700px) {
 
@@ -638,24 +700,29 @@ body {
 
 
   .page {
-    padding-top: 35px;
+    padding: 30px 20px 70px;
   }
 
 
   .article {
-    padding: 35px;
+    padding: 30px;
   }
 
 
-  .article h1 {
-    font-size: 48px;
+  .hero-news h1 {
+    font-size: 46px;
+  }
+
+
+  .lead {
+    font-size: 17px;
   }
 
 
   .read-button {
     width: auto;
 
-    padding: 0 40px;
+    padding: 0 35px;
   }
 
 }

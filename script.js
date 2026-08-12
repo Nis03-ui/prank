@@ -14,11 +14,11 @@ const prankAudio =
   document.getElementById("prankAudio");
 
 
-let loadingTimer;
+let loadingTimer = null;
 
 
 // ======================================
-// READ BUTTON
+// READ FULL STORY
 // ======================================
 
 readButton.addEventListener("click", () => {
@@ -31,18 +31,22 @@ readButton.addEventListener("click", () => {
     interaction.
   */
 
-  prankAudio.load();
+  try {
+    prankAudio.load();
+  } catch (error) {
+    console.log(error);
+  }
 
 
   /*
-    Hide article.
+    Hide the news page.
   */
 
   newsPage.style.display = "none";
 
 
   /*
-    Show realistic loading screen.
+    Show realistic loading state.
   */
 
   loadingScreen.classList.add("show");
@@ -73,10 +77,8 @@ async function showPrank() {
 
 
   /*
-    Attempt audio playback.
-
-    The browser may still reject playback
-    depending on its media policy.
+    Attempt to play the authorized
+    prank audio.
   */
 
   prankAudio.currentTime = 0;
@@ -87,13 +89,13 @@ async function showPrank() {
     await prankAudio.play();
 
     console.log(
-      "Prank audio started."
+      "Audio started successfully."
     );
 
   } catch (error) {
 
     console.log(
-      "Audio playback blocked by browser:",
+      "Browser blocked audio:",
       error
     );
 
