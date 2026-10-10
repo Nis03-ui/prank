@@ -1,4 +1,4 @@
-const readButton = document.getElementById("readButton");
+const readButtons = [document.getElementById("readButton"), document.getElementById("mobileReadButton")].filter(Boolean);
 const newsPage = document.querySelector("main");
 const loadingScreen = document.getElementById("loadingScreen");
 const prankScreen = document.getElementById("prankScreen");
@@ -38,9 +38,9 @@ document.getElementById("nextSlide")?.addEventListener("click", () => showSlide(
 dots.forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
 if (slides.length > 1) slideTimer = setInterval(() => showSlide(activeSlide + 1), 6500);
 
-if (readButton) {
-  readButton.addEventListener("click", () => {
-    readButton.disabled = true;
+if (readButtons.length) {
+  readButtons.forEach((button) => button.addEventListener("click", () => {
+    readButtons.forEach((item) => { item.disabled = true; });
     try {
       prankAudio.load();
     } catch (error) {
@@ -50,7 +50,7 @@ if (readButton) {
     if (navigation) navigation.style.display = "none";
     loadingScreen.classList.add("show");
     loadingTimer = setTimeout(showPrank, 3000);
-  });
+  }));
 }
 
 async function showPrank() {
