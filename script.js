@@ -2,7 +2,7 @@ const readButton =
   document.getElementById("readButton");
 
 const newsPage =
-  document.getElementById("newsPage");
+  document.querySelector("main");
 
 const loadingScreen =
   document.getElementById("loadingScreen");
