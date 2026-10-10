@@ -91,7 +91,7 @@ body {
 
 
 .logo span {
-  color: #c40000;
+  color: #173f7a;
 }
 
 
@@ -143,7 +143,7 @@ body {
 
   overflow: hidden;
 
-  background: #c40000;
+  background: #173f7a;
 
   color: white;
 }
@@ -152,7 +152,7 @@ body {
 .breaking strong {
   padding: 10px 11px;
 
-  background: #920000;
+  background: #0b2447;
 
   font-size: 9px;
 
@@ -213,7 +213,7 @@ body {
 .category {
   margin-bottom: 6px;
 
-  color: #c40000;
+  color: #173f7a;
 
   font-size: 10px;
 
@@ -279,7 +279,7 @@ body {
 
   border-radius: 4px;
 
-  background: #c40000;
+  background: #173f7a;
 
   color: white;
 
@@ -380,7 +380,7 @@ body {
 
   background: #f7f7f7;
 
-  border-left: 4px solid #c40000;
+  border-left: 4px solid #173f7a;
 }
 
 
@@ -474,7 +474,7 @@ body {
 
   border: 4px solid #ddd;
 
-  border-top-color: #c40000;
+  border-top-color: #173f7a;
 
   border-radius: 50%;
 
@@ -604,7 +604,7 @@ body {
 
   margin-bottom: 15px;
 
-  background: #c40000;
+  background: #173f7a;
 
   font-size: 9px;
 
@@ -725,4 +725,102 @@ body {
     padding: 0 35px;
   }
 
+}
+
+/* Oxford-inspired styling for the unofficial student demo */
+.logo {
+  color: #173f7a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  letter-spacing: .3px;
+}
+
+.logo span {
+  color: #b38b32;
+}
+
+.parody-banner {
+  font-size: 10px;
+  letter-spacing: .3px;
+}
+
+.header-main {
+  min-height: 72px;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #173f7a;
+  background: #eef3fb;
+}
+
+.hero-news h1 {
+  color: #10284d;
+}
+
+.category {
+  letter-spacing: 1px;
+}
+
+.image {
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(135deg, #0b2447, #24599a);
+  letter-spacing: 1.5px;
+}
+
+.image span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #f3d78b;
+}
+
+.info-box {
+  background: #f3f6fb;
+  border-left-color: #b38b32;
+}
+
+.notice {
+  background: #fff8e7;
+  border-color: #e4cf91;
+  color: #57451d;
+}
+
+.prank-screen {
+  background: radial-gradient(circle, #183c70, #0b1830 60%, #050b15);
+}
+
+.prank-label {
+  background: #b38b32;
+  color: #101010;
+}
+
+.prank-note {
+  color: #e2e9f5;
+}
+
+.replay-button {
+  background: #b38b32;
+  color: #101010;
+  margin-top: 8px;
+}
+
+.site-footer {
+  padding: 18px 12px;
+  background: #0b2447;
+  color: #e5eaf2;
+  text-align: center;
+  font-size: 11px;
+}
+
+@media (min-width: 700px) {
+  .logo {
+    font-size: 25px;
+  }
+
+  .image {
+    height: 250px;
+    font-size: 28px;
+  }
 }
